@@ -12,27 +12,16 @@ public class Main {
      * @return factorial of <code>value</code>
      */
     public static BigInteger factorial(int value) {
-        int[] arr = new int[value];
-        String string = new String("");
-        for (int i = 0; i < value; i++) {
-            arr[i] = i + 1;
+        BigInteger bigInt = BigInteger.ONE;
+        for(int i = 1; i<=value; i++){
+            bigInt = bigInt.multiply(BigInteger.valueOf(i));
         }
-        BigInteger bigInt = new BigInteger("1");
-        BigInteger secBigInt = new BigInteger("1");
-        BigInteger thirdBigInt = new BigInteger("1");
-        for (int i = 0; i < value; i++) {
-            bigInt = BigInteger.valueOf(1);
-            secBigInt = BigInteger.valueOf(arr[i]);
-            thirdBigInt = bigInt.multiply(secBigInt);
-        }
-        System.out.println(thirdBigInt);
-        return thirdBigInt;
+        return bigInt;
     }
-
 
     public static void main(String[] args) {
 
-        factorial(5);
+        factorial(10);
 
     }
 }
