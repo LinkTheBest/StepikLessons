@@ -16,6 +16,7 @@ public class Main {
         for(int i = 1; i<=value; i++){
             bigInt = bigInt.multiply(BigInteger.valueOf(i));
         }
+
         return bigInt;
     }
 
